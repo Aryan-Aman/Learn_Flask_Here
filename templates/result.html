@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<h2>Result Page</h2>
+<body>
+   {#{% if result<=50%}
+    <h1> You scored below passing marks,Prepare well- FAIL</h1>
+    {% else %}
+    <h1>You scored very well- PASS</h1>
+    {% endif %} when result is called for exprssn no access for this#}
+    <!--for iterate through the result variable =>exprssn dictnry-->
+    <table border=2>
+    {% for key,value in result.items()%}
+    <tr>
+        {# table head table row-comment in jinja#}
+        <th>{{ key }}</th>
+        <th>{{ value }}</th>
+    </tr>
+    {% endfor%}  <!--for=endfor,if=endif,while=endwhile and so on-->
+
+    </table>
+    <!-- <h2>
+        The result is {{result}}
+    </h2>-->
+    
+</body>
+</html>

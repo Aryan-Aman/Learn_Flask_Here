@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask_Demo by Aman</title>
+</head>
+<!--style css can also be added here-->
+<!--to add specific css from ext file add here ->head tag-use link->jinja expression->use url for -->
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<!--script file can be addded here also under script tag-->
+<script type="text/javascript"  src="{{url_for('static',filename='jscript/java.js')}}">
+   
+</script>
+
+<body>
+    <h1>Hi welcome to Result checker !!</h1>
+    <form action="/submit" method="post">
+        <label for="Maths">Maths</label><br>
+        <input type="text" id="maths" name="maths" value="0"><br>
+        <label for="Science">Science</label><br>
+        <input type="text" id="science" name="science" value="0"><br>
+        <label for="Python">Python</label><br>
+        <input type="text" id="python" name="python" value="0"><br>
+        <label for="Flask">Flask</label><br>
+        <input type="text" id="flask" name="flask" value="0"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
